@@ -3,11 +3,9 @@
  */
 package com.dupang.test;
 
+import com.dupang.service.Hello;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.dupang.service.Hello;
-import com.dupang.service.World;
 
 /**
  * <p>
@@ -31,9 +29,9 @@ public class BeanTest {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         Hello hello = ctx.getBean("hello", Hello.class);
         hello.foo();
-        hello.addUser("owen", "7788");
-        World world = ctx.getBean("world", World.class);
-        world.bar();
+        hello.addUser("o", "7788");
+        // World world = ctx.getBean("world", World.class);
+        // world.bar();
 
     }
 }

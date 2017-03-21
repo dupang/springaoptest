@@ -32,6 +32,9 @@ public class HelloImpl implements Hello {
     // 定义一个addUser()方法，模拟应用中的添加用户的方法
     public int addUser(String name, String pass) {
         System.out.println("执行Hello组件的addUser添加用户：" + name);
+        if (name.length() < 3 || name.length() > 10) {
+            throw new IllegalArgumentException("name参数的长度必须大于3，小于10！");
+        }
         return 20;
     }
 }
